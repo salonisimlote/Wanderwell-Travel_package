@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { ArrowLeft, Star, Clock, MapPin, DollarSign, Bookmark, Share2, MapIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { toast } from 'sonner'
 import { fakeApi } from '@/lib/fake-api'
 import { Place, City, places as allPlaces, cities as allCities } from '@/lib/seeds'
 
@@ -70,10 +69,9 @@ export default function PlaceDetailPage() {
         url,
       })
     } else {
-      // FIX 5: use sonner toast instead of blocking alert()
-      navigator.clipboard.writeText(url).then(() => {
-        toast.success('Link copied to clipboard!', { duration: 2500 })
-      })
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(url)
+      alert('Link copied to clipboard!')
     }
   }
 

@@ -10,28 +10,25 @@ import {
   MapPin,
   DollarSign,
   Bookmark,
+  Share2,
   Calendar,
   Zap,
   Utensils,
   Hotel,
   Compass,
   Plane,
-  Loader2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Skeleton } from '@/components/ui/skeleton'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
-import { Badge } from '@/components/ui/badge'
 import { fakeApi } from '@/lib/fake-api'
 import { City, Place } from '@/lib/seeds'
+
+interface CityPageProps {
+  params: {
+    id: string
+  }
+}
 
 export default function CityPage() {
   const params = useParams()
@@ -251,21 +248,18 @@ export default function CityPage() {
             </div>
           </TabsContent>
 
-          {/* FIX 9: Transport tab with city context */}
+          {/* Transport Tab */}
           <TabsContent value="transport" className="space-y-4">
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-foreground">Getting to {city.name}</h2>
+              <h2 className="text-2xl font-bold text-foreground">Book Your Journey</h2>
               <Card className="p-8 bg-gradient-to-r from-primary/10 to-accent/10">
-                <p className="text-muted-foreground mb-2">
-                  Find flights and trains connecting <span className="font-semibold text-foreground">{city.name}</span> with other major cities.
+                <p className="text-muted-foreground mb-4">
+                  Find flights and trains connecting {city.name} with other major cities.
                 </p>
-                <p className="text-sm text-muted-foreground mb-5">
-                  Best time to visit: <span className="font-medium text-foreground">{city.bestTimeToVisit}</span>
-                </p>
-                <Link href={`/transport?city=${city.id}`}>
+                <Link href="/transport">
                   <Button className="bg-primary hover:bg-primary/90 gap-2">
                     <Plane className="w-4 h-4" />
-                    Browse Transport to {city.name}
+                    Browse Transport Options
                   </Button>
                 </Link>
               </Card>
@@ -276,7 +270,7 @@ export default function CityPage() {
           <TabsContent value="itinerary" className="space-y-4">
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-foreground">Generate Your Itinerary</h2>
-              <ItineraryGenerator cityId={city.id} cityName={city.name} />
+              <ItineraryGenerator cityId={city.id} />
             </div>
           </TabsContent>
         </Tabs>
@@ -285,8 +279,6 @@ export default function CityPage() {
   )
 }
 
-// FIX 2: Bookmark always visible (not just on hover)
-// FIX 7: Consistent price display with fallback
 function PlaceCard({
   place,
   isBookmarked,
@@ -307,20 +299,14 @@ function PlaceCard({
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
-        {/* FIX 2: Always-visible bookmark button with clear filled/outline state */}
         <button
           onClick={(e) => {
             e.preventDefault()
             onBookmarkToggle()
           }}
-          aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark this place'}
-          className={`absolute top-3 right-3 p-2 rounded-full transition-all z-10 shadow-sm ${
-            isBookmarked
-              ? 'bg-primary text-primary-foreground'
-              : 'bg-white/90 text-muted-foreground hover:bg-white hover:text-primary'
-          }`}
+          className="absolute top-2 right-2 p-2 bg-white/80 hover:bg-white rounded-full transition-colors z-10"
         >
-          <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`} />
+          <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-primary text-primary' : 'text-muted-foreground'}`} />
         </button>
       </div>
 
@@ -350,25 +336,22 @@ function PlaceCard({
           ))}
         </div>
 
-        {/* FIX 7: Always render price row — fallback for missing price */}
-        <div className="text-sm font-semibold mt-auto pt-2 border-t border-border flex items-center justify-between">
-          {place.priceRange ? (
-            <span className="text-primary">
-              ₹{place.priceRange.min.toLocaleString()} – ₹{place.priceRange.max.toLocaleString()}
-            </span>
-          ) : (
-            <span className="text-muted-foreground font-normal">Free entry</span>
-          )}
-          <span className="text-xs text-muted-foreground">{place.openingHours}</span>
-        </div>
+        {place.priceRange && (
+          <div className="text-sm font-semibold text-primary">
+            ₹{place.priceRange.min} - ₹{place.priceRange.max}
+          </div>
+        )}
+
+        <p className="text-xs text-muted-foreground mt-auto pt-2 border-t border-border">
+          {place.openingHours}
+        </p>
       </div>
     </Card>
   )
 }
 
-// FIX 4: shadcn Select components + FIX 6: loading spinner & skeleton
-function ItineraryGenerator({ cityId, cityName }: { cityId: string; cityName: string }) {
-  const [days, setDays] = useState('1')
+function ItineraryGenerator({ cityId }: { cityId: string }) {
+  const [days, setDays] = useState(1)
   const [pace, setPace] = useState<'relaxed' | 'normal' | 'packed'>('normal')
   const [interests, setInterests] = useState<string[]>(['heritage'])
   const [itinerary, setItinerary] = useState<any>(null)
@@ -386,10 +369,9 @@ function ItineraryGenerator({ cityId, cityName }: { cityId: string; cityName: st
 
   const generateItinerary = async () => {
     setLoading(true)
-    setItinerary(null)
     const result = await fakeApi.fetch('/itinerary/generate', {
       cityId,
-      days: Number(days),
+      days,
       pace,
       interests,
     })
@@ -401,36 +383,32 @@ function ItineraryGenerator({ cityId, cityName }: { cityId: string; cityName: st
     <div className="space-y-6">
       <div className="space-y-4 bg-muted/40 p-6 rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* FIX 4: shadcn Select for Duration */}
           <div className="space-y-2">
             <label className="text-sm font-medium text-foreground">Duration</label>
-            <Select value={days} onValueChange={setDays}>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select days" />
-              </SelectTrigger>
-              <SelectContent>
-                {[1, 2, 3, 4, 5].map((d) => (
-                  <SelectItem key={d} value={String(d)}>
-                    {d} Day{d > 1 ? 's' : ''}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <select
+              value={days}
+              onChange={(e) => setDays(Number(e.target.value))}
+              className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground"
+            >
+              {[1, 2, 3, 4, 5].map((d) => (
+                <option key={d} value={d}>
+                  {d} Day{d > 1 ? 's' : ''}
+                </option>
+              ))}
+            </select>
           </div>
 
-          {/* FIX 4: shadcn Select for Pace */}
           <div className="space-y-2">
             <label className="text-sm font-medium text-foreground">Pace</label>
-            <Select value={pace} onValueChange={(v) => setPace(v as any)}>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select pace" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="relaxed">Relaxed</SelectItem>
-                <SelectItem value="normal">Normal</SelectItem>
-                <SelectItem value="packed">Packed</SelectItem>
-              </SelectContent>
-            </Select>
+            <select
+              value={pace}
+              onChange={(e) => setPace(e.target.value as any)}
+              className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground"
+            >
+              <option value="relaxed">Relaxed</option>
+              <option value="normal">Normal</option>
+              <option value="packed">Packed</option>
+            </select>
           </div>
         </div>
 
@@ -453,44 +431,16 @@ function ItineraryGenerator({ cityId, cityName }: { cityId: string; cityName: st
           </div>
         </div>
 
-        {/* FIX 6: Loading spinner on button */}
         <Button
           onClick={generateItinerary}
           disabled={loading || interests.length === 0}
-          className="w-full bg-primary hover:bg-primary/90 gap-2"
+          className="w-full bg-primary hover:bg-primary/90"
         >
-          {loading ? (
-            <>
-              <Loader2 className="w-4 h-4 animate-spin" />
-              Generating your {cityName} itinerary…
-            </>
-          ) : (
-            'Generate Itinerary'
-          )}
+          {loading ? 'Generating...' : 'Generate Itinerary'}
         </Button>
       </div>
 
-      {/* FIX 6: Skeleton while loading */}
-      {loading && (
-        <div className="space-y-4">
-          {Array.from({ length: Number(days) }).map((_, i) => (
-            <Card key={i} className="p-6 space-y-3">
-              <Skeleton className="h-6 w-24" />
-              {[1, 2, 3].map((j) => (
-                <div key={j} className="flex gap-4 pb-3 border-b border-border last:border-b-0">
-                  <Skeleton className="h-4 w-16 flex-shrink-0" />
-                  <div className="flex-1 space-y-2">
-                    <Skeleton className="h-4 w-3/4" />
-                    <Skeleton className="h-3 w-1/2" />
-                  </div>
-                </div>
-              ))}
-            </Card>
-          ))}
-        </div>
-      )}
-
-      {itinerary && !loading && (
+      {itinerary && (
         <div className="space-y-4">
           {itinerary.itinerary.map((day: any) => (
             <Card key={day.day} className="p-6">
@@ -501,11 +451,7 @@ function ItineraryGenerator({ cityId, cityName }: { cityId: string; cityName: st
                     <div className="flex-shrink-0 w-16 font-semibold text-primary text-sm">{item.startTime}</div>
                     <div className="flex-1">
                       <p className="font-medium text-foreground">{item.name}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {item.type === 'meal'
-                          ? `${item.meal} · ${Math.round(item.duration * 60)} min`
-                          : `${item.duration}h`}
-                      </p>
+                      <p className="text-sm text-muted-foreground">{item.type === 'meal' ? `${item.meal} - ${Math.round(item.duration * 60)} minutes` : `${item.duration}h`}</p>
                     </div>
                   </div>
                 ))}

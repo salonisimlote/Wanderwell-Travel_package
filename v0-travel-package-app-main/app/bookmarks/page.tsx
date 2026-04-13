@@ -6,7 +6,7 @@ import { ArrowLeft, Bookmark, Download, Trash2, Star, Clock } from 'lucide-react
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { fakeApi } from '@/lib/fake-api'
-import { places as allPlaces, cities as allCities } from '@/lib/seeds'
+import { places as allPlaces } from '@/lib/seeds'
 import { Place } from '@/lib/seeds'
 
 export default function BookmarksPage() {
@@ -48,17 +48,6 @@ export default function BookmarksPage() {
     document.body.appendChild(element)
     element.click()
     document.body.removeChild(element)
-  }
-
-  // FIX 3: helper to get proper city name from cityId
-  const getCityName = (cityId: string) => {
-    const city = allCities.find((c) => c.id === cityId)
-    return city ? city.name : cityId
-  }
-
-  const getCityRegion = (cityId: string) => {
-    const city = allCities.find((c) => c.id === cityId)
-    return city ? city.region : ''
   }
 
   return (
@@ -150,7 +139,6 @@ export default function BookmarksPage() {
                                 e.preventDefault()
                                 removeBookmark(place.id)
                               }}
-                              aria-label="Remove bookmark"
                               className="absolute top-2 right-2 p-2 bg-white/80 hover:bg-red-500 hover:text-white rounded-full transition-colors"
                             >
                               <Trash2 className="w-4 h-4" />
@@ -162,17 +150,7 @@ export default function BookmarksPage() {
                               {place.name}
                             </h3>
 
-                            {/* FIX 3: show proper city name + region, not raw cityId */}
-                            <Link
-                              href={`/city/${place.cityId}`}
-                              onClick={(e) => e.stopPropagation()}
-                              className="text-xs text-primary hover:underline mt-1 block"
-                            >
-                              {getCityName(place.cityId)}
-                              {getCityRegion(place.cityId) && (
-                                <span className="text-muted-foreground"> · {getCityRegion(place.cityId)}</span>
-                              )}
-                            </Link>
+                            <p className="text-xs text-muted-foreground mt-1">{place.cityId.toUpperCase()}</p>
 
                             <div className="flex items-center gap-2 mt-3 text-sm">
                               <Star className="w-4 h-4 fill-accent text-accent flex-shrink-0" />
@@ -182,16 +160,11 @@ export default function BookmarksPage() {
                               <span className="text-muted-foreground">{place.bestTimeMinutes}m</span>
                             </div>
 
-                            {/* FIX 7: consistent price with fallback */}
-                            <div className="mt-3 pt-3 border-t border-border text-sm font-medium">
-                              {place.priceRange ? (
-                                <span className="text-primary">
-                                  ₹{place.priceRange.min.toLocaleString()} – ₹{place.priceRange.max.toLocaleString()}
-                                </span>
-                              ) : (
-                                <span className="text-muted-foreground font-normal">Free entry</span>
-                              )}
-                            </div>
+                            {place.priceRange && (
+                              <div className="mt-3 pt-3 border-t border-border text-sm font-medium text-primary">
+                                ₹{place.priceRange.min} - ₹{place.priceRange.max}
+                              </div>
+                            )}
                           </div>
                         </Card>
                       </Link>

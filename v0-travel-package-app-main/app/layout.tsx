@@ -1,7 +1,6 @@
 import React from "react"
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Toaster } from '@/components/ui/sonner'
 
 import './globals.css'
 
@@ -11,6 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Wanderwell - Discover India',
   description: 'Plan your perfect Indian city adventure with Wanderwell. Explore hotels, restaurants, attractions and create personalized itineraries.',
+  generator: 'v0.app',
 }
 
 export default function RootLayout({
@@ -20,10 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
-        {children}
-        <Toaster position="bottom-center" richColors />
-      </body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   )
 }

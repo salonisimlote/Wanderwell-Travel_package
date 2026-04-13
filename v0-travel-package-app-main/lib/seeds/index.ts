@@ -50,7 +50,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to March',
     avgPrice: { min: 2000, max: 6000 },
     seedHash: '20260210-kol',
-    image: 'https://images.unsplash.com/photo-1558431382-27e303142255?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=800&h=400&fit=crop',
   },
   {
     id: 'delhi',
@@ -63,7 +63,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to March',
     avgPrice: { min: 1500, max: 5000 },
     seedHash: '20260210-del',
-    image: 'https://images.unsplash.com/photo-1587474260584-136574528ee0?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1556679343-c7306c1313c5?w=800&h=400&fit=crop',
   },
   {
     id: 'mumbai',
@@ -76,7 +76,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'November to May',
     avgPrice: { min: 2500, max: 7000 },
     seedHash: '20260210-mum',
-    image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&h=400&fit=crop',
   },
   {
     id: 'bengaluru',
@@ -89,7 +89,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to February',
     avgPrice: { min: 1800, max: 5500 },
     seedHash: '20260210-blr',
-    image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=800&h=400&fit=crop',
   },
   {
     id: 'chennai',
@@ -102,7 +102,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'November to February',
     avgPrice: { min: 1700, max: 5000 },
     seedHash: '20260210-che',
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&h=400&fit=crop',
   },
   {
     id: 'hyderabad',
@@ -115,7 +115,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to March',
     avgPrice: { min: 1600, max: 5200 },
     seedHash: '20260210-hyd',
-    image: 'https://images.unsplash.com/photo-1572445271230-a78b5944a659?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600685160014-55d8f1f9f08c?w=800&h=400&fit=crop',
   },
   {
     id: 'jaipur',
@@ -128,7 +128,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to March',
     avgPrice: { min: 1500, max: 4800 },
     seedHash: '20260210-jai',
-    image: 'https://images.unsplash.com/photo-1477587458883-47145ed31d2a?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1524229648276-e66561fe45a9?w=800&h=400&fit=crop',
   },
   {
     id: 'udaipur',
@@ -141,7 +141,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'September to March',
     avgPrice: { min: 2000, max: 6500 },
     seedHash: '20260210-udp',
-    image: 'https://images.unsplash.com/photo-1509116839297-90c3b844f6af?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=400&fit=crop',
   },
   {
     id: 'agra',
@@ -180,7 +180,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to March',
     avgPrice: { min: 1300, max: 4200 },
     seedHash: '20260210-amr',
-    image: 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1609948543911-7d97c4f45d1a?w=800&h=400&fit=crop',
   },
   {
     id: 'chandigarh',
@@ -193,7 +193,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'September to March',
     avgPrice: { min: 1500, max: 4500 },
     seedHash: '20260210-chd',
-    image: 'https://images.unsplash.com/photo-1626516011671-e7c3eb03f040?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1621162779978-06f1c1fdb1c5?w=800&h=400&fit=crop',
   },
   {
     id: 'pune',
@@ -206,7 +206,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to February',
     avgPrice: { min: 1700, max: 5200 },
     seedHash: '20260210-pun',
-    image: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1602477704806-7a05bd4cc7cc?w=800&h=400&fit=crop',
   },
   {
     id: 'kochi',
@@ -219,7 +219,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to March',
     avgPrice: { min: 1600, max: 5000 },
     seedHash: '20260210-koc',
-    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&h=400&fit=crop',
   },
   {
     id: 'thiruvananthapuram',
@@ -232,7 +232,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'October to March',
     avgPrice: { min: 1500, max: 4800 },
     seedHash: '20260210-tvm',
-    image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600840977560-92a8c4ccfc2b?w=800&h=400&fit=crop',
   },
   {
     id: 'goa',
@@ -245,7 +245,7 @@ export const cities: City[] = [
     bestTimeToVisit: 'November to February',
     avgPrice: { min: 2200, max: 7500 },
     seedHash: '20260210-goa',
-    image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=400&fit=crop',
   },
 ]
 
@@ -263,7 +263,7 @@ export const places: Place[] = [
     description: '19th century temple on the Hooghly river, one of the most important pilgrimage sites.',
     openingHours: '05:00-21:00',
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1627894005990-80c73e89cb37?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1599662150879-2ceudc973885?w=600&h=400&fit=crop',
   },
   {
     id: 'victoria-memorial',
@@ -277,7 +277,7 @@ export const places: Place[] = [
     description: 'Iconic marble building and museum dedicated to Queen Victoria, set in beautiful gardens.',
     openingHours: '10:00-17:00',
     bestTimeMinutes: 120,
-    image: 'https://images.unsplash.com/photo-1558431382-27e303142255?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1518684713236-c37b00ecb898?w=600&h=400&fit=crop',
   },
   {
     id: 'howrah-bridge',
@@ -291,7 +291,7 @@ export const places: Place[] = [
     description: 'Historic cantilever bridge and symbol of Kolkata, stunning at sunrise and sunset.',
     openingHours: '00:00-23:59',
     bestTimeMinutes: 45,
-    image: 'https://images.unsplash.com/photo-1609681342429-a8b34e5a5a9b?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512207736139-ca6b0f5f0690?w=600&h=400&fit=crop',
   },
   {
     id: 'st-paul-cathedral',
@@ -305,7 +305,7 @@ export const places: Place[] = [
     description: 'Beautiful Gothic cathedral with stunning stained glass windows and peaceful interiors.',
     openingHours: '09:00-17:00',
     bestTimeMinutes: 60,
-    image: 'https://images.unsplash.com/photo-1543418219-44e5e7800ca6?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1549144611-11ee4da3cb26?w=600&h=400&fit=crop',
   },
   {
     id: 'indian-museum',
@@ -319,7 +319,7 @@ export const places: Place[] = [
     description: 'One of the oldest museums in Asia with extensive collections of art, archaeology and natural history.',
     openingHours: '10:00-17:00',
     bestTimeMinutes: 180,
-    image: 'https://images.unsplash.com/photo-1565118531796-763e5082d113?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1577720643272-265fab8ce7d5?w=600&h=400&fit=crop',
   },
   {
     id: 'rose-garden',
@@ -333,7 +333,7 @@ export const places: Place[] = [
     description: 'Serene botanical garden with hundreds of rose varieties and walking paths.',
     openingHours: '07:00-18:00',
     bestTimeMinutes: 75,
-    image: 'https://images.unsplash.com/photo-1490750967868-88df5691cc4b?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585820868178-a50edc2b0ffd?w=600&h=400&fit=crop',
   },
 
   // Kolkata Restaurants
@@ -350,7 +350,7 @@ export const places: Place[] = [
     openingHours: '11:00-23:00',
     priceRange: { min: 150, max: 600 },
     bestTimeMinutes: 75,
-    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e4e31?w=600&h=400&fit=crop',
   },
   {
     id: 'aripan-restaurant',
@@ -365,7 +365,7 @@ export const places: Place[] = [
     openingHours: '12:00-23:00',
     priceRange: { min: 400, max: 1200 },
     bestTimeMinutes: 120,
-    image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop',
   },
   {
     id: 'suruchi-restaurant',
@@ -380,7 +380,7 @@ export const places: Place[] = [
     openingHours: '11:30-22:00',
     priceRange: { min: 100, max: 300 },
     bestTimeMinutes: 60,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
   },
   {
     id: 'peter-cat',
@@ -410,7 +410,7 @@ export const places: Place[] = [
     openingHours: '11:00-23:00',
     priceRange: { min: 150, max: 500 },
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e4e31?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1489137350633-3457d3f86055?w=600&h=400&fit=crop',
   },
   {
     id: 'kewpies',
@@ -425,7 +425,7 @@ export const places: Place[] = [
     openingHours: '10:00-23:00',
     priceRange: { min: 200, max: 700 },
     bestTimeMinutes: 75,
-    image: 'https://images.unsplash.com/photo-1631515244080-2f98d2d0571c?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1571407970349-bc4e5c3eb622?w=600&h=400&fit=crop',
   },
 
   // Kolkata Hotels
@@ -442,7 +442,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 3000, max: 7000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop',
   },
   {
     id: 'taj-bengal',
@@ -457,7 +457,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 5000, max: 12000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1551882547-ff40c4a49ce7?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop',
   },
   {
     id: 'the-oberoi-grand',
@@ -472,7 +472,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 4500, max: 10000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1596701062351-8ac031d01f43?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1542314503-37143f4f6c2a?w=600&h=400&fit=crop',
   },
   {
     id: 'radhisson-kol',
@@ -487,7 +487,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 2500, max: 5500 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1564501049351-005e2b3e5f0b?w=600&h=400&fit=crop',
   },
 
   // Delhi Sights
@@ -517,7 +517,7 @@ export const places: Place[] = [
     description: 'Iconic war memorial and popular gathering place with surrounding gardens and cafes.',
     openingHours: '00:00-23:59',
     bestTimeMinutes: 45,
-    image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop',
   },
   {
     id: 'red-fort',
@@ -531,7 +531,7 @@ export const places: Place[] = [
     description: 'UNESCO World Heritage fort built by Mughal emperor with stunning red sandstone walls.',
     openingHours: '09:30-16:30',
     bestTimeMinutes: 150,
-    image: 'https://images.unsplash.com/photo-1524613032530-449a5d94c285?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1587474260584-136574528ee0?w=600&h=400&fit=crop',
   },
   {
     id: 'qutb-minar',
@@ -545,7 +545,7 @@ export const places: Place[] = [
     description: '73m tall minaret with stunning Indo-Islamic architecture and surrounding historic ruins.',
     openingHours: '07:00-17:00',
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585670954888-868b0bef6e4b?w=600&h=400&fit=crop',
   },
   {
     id: 'humayun-tomb',
@@ -559,7 +559,7 @@ export const places: Place[] = [
     description: 'First garden-tomb in India and UNESCO World Heritage site with beautiful Mughal architecture.',
     openingHours: '06:00-18:00',
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1598424847913-3c97f3da2e46?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585670954888-868b0bef6e4b?w=600&h=400&fit=crop',
   },
   {
     id: 'chandni-chowk',
@@ -573,7 +573,7 @@ export const places: Place[] = [
     description: 'Historic market and bazaar with shops, street food vendors and old Delhi charm.',
     openingHours: '10:00-20:00',
     bestTimeMinutes: 120,
-    image: 'https://images.unsplash.com/photo-1606298855672-3efb63017be8?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585301895917-c1b37c261d41?w=600&h=400&fit=crop',
   },
 
   // Delhi Restaurants
@@ -590,7 +590,7 @@ export const places: Place[] = [
     openingHours: '12:30-14:45, 19:00-23:30',
     priceRange: { min: 600, max: 1800 },
     bestTimeMinutes: 120,
-    image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop',
   },
   {
     id: 'paranthe-wali-gali',
@@ -605,7 +605,7 @@ export const places: Place[] = [
     openingHours: '08:00-22:00',
     priceRange: { min: 30, max: 200 },
     bestTimeMinutes: 60,
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585521537530-dd0ee82537f9?w=600&h=400&fit=crop',
   },
   {
     id: 'karim-restaurant',
@@ -620,7 +620,7 @@ export const places: Place[] = [
     openingHours: '08:00-23:00',
     priceRange: { min: 150, max: 600 },
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop',
   },
   {
     id: 'dum-pukht',
@@ -635,7 +635,7 @@ export const places: Place[] = [
     openingHours: '12:30-14:45, 19:00-23:30',
     priceRange: { min: 500, max: 1500 },
     bestTimeMinutes: 120,
-    image: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop',
   },
   {
     id: 'gulab-singhii',
@@ -650,7 +650,7 @@ export const places: Place[] = [
     openingHours: '11:00-22:30',
     priceRange: { min: 150, max: 500 },
     bestTimeMinutes: 75,
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
   },
   {
     id: 'tamasha-restaurant',
@@ -665,7 +665,7 @@ export const places: Place[] = [
     openingHours: '12:00-23:00',
     priceRange: { min: 400, max: 1200 },
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1470337458703-83d0db7c862c?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=600&h=400&fit=crop',
   },
 
   // Delhi Hotels
@@ -682,7 +682,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 4000, max: 10000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop',
   },
   {
     id: 'the-imperial-delhi',
@@ -697,7 +697,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 4500, max: 11000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1535827841776-24afc1e255ac?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop',
   },
   {
     id: 'oberoi-delhi',
@@ -712,7 +712,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 3500, max: 9000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1564501049351-005e2b3e5f0b?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1542314503-37143f4f6c2a?w=600&h=400&fit=crop',
   },
   {
     id: 'hyatt-regency-delhi',
@@ -727,7 +727,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 2500, max: 6000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1564501049351-005e2b3e5f0b?w=600&h=400&fit=crop',
   },
 
   // Mumbai Sights
@@ -743,7 +743,7 @@ export const places: Place[] = [
     description: 'Iconic arch monument overlooking the Arabian Sea, perfect for sunset views.',
     openingHours: '00:00-23:59',
     bestTimeMinutes: 60,
-    image: 'https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop',
   },
   {
     id: 'marine-drive',
@@ -757,7 +757,7 @@ export const places: Place[] = [
     description: '3.5km curved coastal promenade with Arabian Sea views, perfect for evening walks.',
     openingHours: '00:00-23:59',
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
   },
   {
     id: 'haji-ali-dargah',
@@ -771,7 +771,7 @@ export const places: Place[] = [
     description: 'Historic mosque and shrine on an islet, accessible during low tide, with spiritual significance.',
     openingHours: '05:30-22:00',
     bestTimeMinutes: 75,
-    image: 'https://images.unsplash.com/photo-1610121835003-a5dc4c89e11e?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1587474260584-136574528ee0?w=600&h=400&fit=crop',
   },
   {
     id: 'elephanta-caves',
@@ -785,7 +785,7 @@ export const places: Place[] = [
     description: 'UNESCO World Heritage site with ancient Hindu temples carved into cave rocks.',
     openingHours: '09:00-17:30',
     bestTimeMinutes: 180,
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585670954888-868b0bef6e4b?w=600&h=400&fit=crop',
   },
   {
     id: 'chhatrapati-terminus',
@@ -799,7 +799,7 @@ export const places: Place[] = [
     description: 'UNESCO World Heritage railway station with stunning Victorian-Gothic architecture.',
     openingHours: '00:00-23:59',
     bestTimeMinutes: 60,
-    image: 'https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585821537530-dd0ee82537f9?w=600&h=400&fit=crop',
   },
   {
     id: 'sanjay-gandhi-park',
@@ -813,7 +813,7 @@ export const places: Place[] = [
     description: 'Urban national park with diverse flora and fauna, hiking trails and wildlife spotting opportunities.',
     openingHours: '07:00-18:00',
     bestTimeMinutes: 240,
-    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1470252649378-9c29740ff023?w=600&h=400&fit=crop',
   },
 
   // Mumbai Restaurants
@@ -830,7 +830,7 @@ export const places: Place[] = [
     openingHours: '07:00-23:00',
     priceRange: { min: 250, max: 800 },
     bestTimeMinutes: 90,
-    image: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1552832860-cfb67165eaf0?w=600&h=400&fit=crop',
   },
   {
     id: 'mahesh-lunch-home',
@@ -845,7 +845,7 @@ export const places: Place[] = [
     openingHours: '12:00-23:30',
     priceRange: { min: 500, max: 1600 },
     bestTimeMinutes: 120,
-    image: 'https://images.unsplash.com/photo-1585667312881-8e9e4ec91e81?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop',
   },
   {
     id: 'gajalee-restaurant',
@@ -860,7 +860,7 @@ export const places: Place[] = [
     openingHours: '11:30-23:30',
     priceRange: { min: 300, max: 900 },
     bestTimeMinutes: 100,
-    image: 'https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585667312881-8e9e4ec91e81?w=600&h=400&fit=crop',
   },
   {
     id: 'trishna-restaurant',
@@ -875,7 +875,7 @@ export const places: Place[] = [
     openingHours: '11:30-23:00',
     priceRange: { min: 400, max: 1200 },
     bestTimeMinutes: 110,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop',
   },
   {
     id: 'peshwari-biryani',
@@ -890,7 +890,7 @@ export const places: Place[] = [
     openingHours: '12:00-23:00',
     priceRange: { min: 150, max: 500 },
     bestTimeMinutes: 70,
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e4e31?w=600&h=400&fit=crop',
   },
   {
     id: 'sardar-sarovar-restaurant',
@@ -905,7 +905,7 @@ export const places: Place[] = [
     openingHours: '11:00-23:00',
     priceRange: { min: 120, max: 400 },
     bestTimeMinutes: 75,
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
   },
 
   // Mumbai Hotels
@@ -922,7 +922,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 5000, max: 15000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop',
   },
   {
     id: 'oberoi-mumbai',
@@ -937,7 +937,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 4500, max: 12000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop',
   },
   {
     id: 'four-seasons-mumbai',
@@ -952,7 +952,7 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 6000, max: 20000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1542314503-37143f4f6c2a?w=600&h=400&fit=crop',
   },
   {
     id: 'hyatt-centric-mumbai',
@@ -967,6 +967,6 @@ export const places: Place[] = [
     openingHours: '00:00-23:59',
     priceRange: { min: 2500, max: 6000 },
     bestTimeMinutes: 30,
-    image: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1564501049351-005e2b3e5f0b?w=600&h=400&fit=crop',
   },
 ]

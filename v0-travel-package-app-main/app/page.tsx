@@ -6,7 +6,7 @@ import { Search, MapPin, Compass, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { fakeApi } from '@/lib/fake-api'
-import { City, cities as allCities, places as allPlaces } from '@/lib/seeds'
+import { City } from '@/lib/seeds'
 import { Card } from '@/components/ui/card'
 
 export default function Page() {
@@ -14,12 +14,6 @@ export default function Page() {
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
   const [searchResults, setSearchResults] = useState<City[]>([])
-  const [searchAttempted, setSearchAttempted] = useState(false)
-
-  // FIX 8: derive counts dynamically from seed data instead of hardcoding
-  const cityCount = allCities.length
-  const placeCount = allPlaces.length
-  const regionCount = new Set(allCities.map((c) => c.region)).size
 
   useEffect(() => {
     const loadCities = async () => {
@@ -33,7 +27,6 @@ export default function Page() {
   const handleSearch = (query: string) => {
     setSearchQuery(query)
     if (query.trim()) {
-      setSearchAttempted(true)
       const filtered = cities.filter(
         (city) =>
           city.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -41,7 +34,6 @@ export default function Page() {
       )
       setSearchResults(filtered)
     } else {
-      setSearchAttempted(false)
       setSearchResults([])
     }
   }
@@ -92,52 +84,41 @@ export default function Page() {
               />
             </div>
 
-            {/* FIX 1: Search Results Dropdown with empty state */}
-            {searchQuery.trim() && (
+            {/* Search Results Dropdown */}
+            {searchResults.length > 0 && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-card rounded-lg border border-border shadow-lg z-40 overflow-hidden">
-                {searchResults.length > 0 ? (
-                  searchResults.map((city) => (
-                    <Link
-                      key={city.id}
-                      href={`/city/${city.id}`}
-                      className="block px-4 py-3 hover:bg-muted border-b border-border last:border-b-0 transition-colors"
-                    >
-                      <div className="flex items-center gap-3">
-                        <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                        <div className="text-left">
-                          <p className="font-medium text-foreground">{city.name}</p>
-                          <p className="text-sm text-muted-foreground">{city.region}</p>
-                        </div>
+                {searchResults.map((city) => (
+                  <Link
+                    key={city.id}
+                    href={`/city/${city.id}`}
+                    className="block px-4 py-3 hover:bg-muted border-b border-border last:border-b-0 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                      <div className="text-left">
+                        <p className="font-medium text-foreground">{city.name}</p>
+                        <p className="text-sm text-muted-foreground">{city.region}</p>
                       </div>
-                    </Link>
-                  ))
-                ) : (
-                  <div className="px-4 py-5 text-center">
-                    <p className="font-medium text-foreground text-sm">
-                      No cities found for &quot;{searchQuery}&quot;
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Try Delhi, Mumbai or Goa
-                    </p>
-                  </div>
-                )}
+                    </div>
+                  </Link>
+                ))}
               </div>
             )}
           </div>
 
-          {/* FIX 8: Dynamic stats from seed data */}
+          {/* Quick Stats */}
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto pt-8">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">{cityCount}</div>
+              <div className="text-2xl font-bold text-primary">16</div>
               <p className="text-sm text-muted-foreground">Cities</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">{placeCount}+</div>
+              <div className="text-2xl font-bold text-primary">300+</div>
               <p className="text-sm text-muted-foreground">Places</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">{regionCount}</div>
-              <p className="text-sm text-muted-foreground">Regions</p>
+              <div className="text-2xl font-bold text-primary">100%</div>
+              <p className="text-sm text-muted-foreground">Free</p>
             </div>
           </div>
         </div>
@@ -200,7 +181,7 @@ export default function Page() {
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Everything You Need</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              From accommodation to dining, attractions to itineraries - we&apos;ve got you covered.
+              From accommodation to dining, attractions to itineraries - we've got you covered.
             </p>
           </div>
 
@@ -244,10 +225,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* FIX 10: Dynamic copyright year */}
+      {/* Footer */}
       <footer className="border-t border-border bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Wanderwell. Discover India&apos;s vibrant cities.</p>
+          <p>© 2026 Wanderwell. Discover India's vibrant cities.</p>
         </div>
       </footer>
     </div>
